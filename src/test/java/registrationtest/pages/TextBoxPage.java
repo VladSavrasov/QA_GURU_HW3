@@ -1,4 +1,4 @@
-package registrationTest.pages;
+package registrationtest.pages;
 
 import com.codeborne.selenide.SelenideElement;
 

@@ -1,8 +1,8 @@
-package registrationTest.pages;
+package registrationtest.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import registrationTest.pages.components.CalendarComponent;
-import registrationTest.pages.components.ModalFormComponent;
+import registrationtest.pages.components.CalendarComponent;
+import registrationtest.pages.components.ModalFormComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;

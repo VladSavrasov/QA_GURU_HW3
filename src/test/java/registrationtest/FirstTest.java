@@ -1,7 +1,7 @@
-package registrationTest;
+package registrationtest;
 
 import org.junit.jupiter.api.Test;
-import registrationTest.pages.RegistrationPage;
+import registrationtest.pages.RegistrationPage;
 import static com.codeborne.selenide.Selenide.open;
 
 
@@ -25,6 +25,7 @@ RegistrationPage registrationPage =new RegistrationPage();
                 .setState(testData.state)
                 .setCity(testData.city)
                 .submit();
+        System.out.println(testData.day);
 
         registrationPage.modalformFieldCheck("Student Name",testData.firstName+" "+ testData.lastName)
                 .modalformFieldCheck("Student Email",testData.email)

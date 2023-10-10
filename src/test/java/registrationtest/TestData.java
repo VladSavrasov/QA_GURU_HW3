@@ -1,10 +1,9 @@
-package registrationTest;
+package registrationtest;
 
 import com.github.javafaker.Faker;
-import registrationTest.utils.RandomGenerator;
+import registrationtest.utils.RandomGenerator;
 
 public class TestData extends RandomGenerator {
-    Faker faker = new Faker();
     String monthArray[] = {"January","February","March","April","May","June",
             "July","Augest","September","October","November","December"};
     String hobbies[] = {"Sports","Reading","Music"};
@@ -18,17 +17,14 @@ public class TestData extends RandomGenerator {
             lastName = faker.name().lastName(),
             email = faker.internet().emailAddress(),
             gender = faker.demographic().sex(),
-            phoneNumber = String.valueOf(faker.number().randomNumber(10,true)),
-            day = String.valueOf(faker.number().numberBetween(1,31)),
-            month = arrayGenerate(monthArray),
-            year = String.valueOf(faker.number().numberBetween(1996,2005)),
-            subject =getRandomCapital(),
-            hobby = arrayGenerate(hobbies),
+            phoneNumber = String.valueOf(faker.number().randomNumber(10, true)),
+            day = dayCheck(),
+            month = faker.options().option(monthArray),
+            year = String.valueOf(faker.number().numberBetween(1996, 2005)),
+            subject = getRandomCapital(),
+            hobby = faker.options().option(hobbies),
             picture = "photo_5440751325626355282_x.jpg",
             address = faker.address().streetAddress(),
-            state = arrayGenerate(states),
-            city = cityArrayGenerate(state,citiesNCR,citiesUttar,citiesHaryana,citiesRajasthan);
-
-
-
+            state = faker.options().option(states),
+            city = cityArrayGenerate(state, citiesNCR, citiesUttar, citiesHaryana, citiesRajasthan);
 }
