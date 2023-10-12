@@ -9,7 +9,7 @@ public class RandomGenerator {
     public Faker faker = new Faker();
 
     public String dayCheck() {
-        String day = String.valueOf(faker.number().numberBetween(1, 31));
+        String day = String.valueOf(faker.number().numberBetween(1, 28));
         return (Integer.parseInt(day) > 9) ? day : "0" + day;
     }
 
